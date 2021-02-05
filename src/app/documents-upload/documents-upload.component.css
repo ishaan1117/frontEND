@@ -1,0 +1,22 @@
+div {
+  position: relative;
+  overflow: hidden;
+}
+.form-inline {
+  margin-top: 10%;
+  margin-bottom: auto;
+  margin-left: 35%;
+  margin-right: auto;
+  font-size: 15px;
+}
+.upload-btn {
+  padding-left: 10px;
+}
+.form-control {
+  font-size: 12px;
+}
+p {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 300%;
+}

@@ -1,0 +1,109 @@
+<div class="bg-img">
+    <div class="row">
+        <div class="col-md-4">
+            <!-- <p class="text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt alias, adipisci laudantium quis
+                explicabo repudiandae doloremque voluptate labore ducimus voluptatibus maxime, nisi deserunt vel voluptatum
+                delectus laboriosam porro voluptas harum tenetur molestiae nobis. Ut accusantium odit soluta aliquid saepe,
+                sapiente quae temporibus repellat asperiores esse accusamus dolore quod recusandae molestias?</p> -->
+        </div>
+        <div class="col-md-4 mandy" style="color: white;">
+            <h3 align="center">Register for Account</h3>
+            <hr color="white" width="55%">
+            <form  [formGroup]="regForm" style="padding: 10px;">
+                <div class="form-group">
+                    <label for="FirstName">FirstName</label>
+                    <input type="text" class="form-control" id="FirstName" placeholder="First Name"  formControlName="fname"
+                    [(ngModel)]="rd.firstName" >
+                </div>
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.fname">
+                      <div class="error-message"
+                        *ngIf="regForm.get('fname').hasError(error.type) && (regForm.get('fname').dirty || regForm.get('fname').touched)">
+                        {{ error.message }}
+                      </div>
+                    </ng-container>
+                  </div>
+                <div class="form-group">
+                    <label for="MiddleName">MiddleName</label>
+                    <input type="text" class="form-control" id="MiddleName" placeholder="Middle Name">
+                </div>
+                <div class="form-group">
+                    <label for="LastName">LastName</label>
+                    <input type="text" class="form-control" id="LastName" placeholder="Last Name" [(ngModel)]="rd.lastName" formControlName="lname">
+                </div>
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.lname">
+                      <div class="error-message"
+                        *ngIf="regForm.get('lname').hasError(error.type) && (regForm.get('lname').dirty || regForm.get('lname').touched)">
+                        {{ error.message }}
+                      </div>
+                    </ng-container>
+                  </div>
+
+                <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="text" class="form-control" id="Email" placeholder="Email" [(ngModel)]="rd.email"
+                    formControlName="email">
+                </div>
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.email">
+                      <div class="error-message"
+                        *ngIf="regForm.get('email').hasError(error.type) && (regForm.get('email').dirty || regForm.get('email').touched)">
+                        {{ error.message }}
+                      </div>
+                    </ng-container>
+                  </div>
+
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input type="password" class="form-control" id="Password" placeholder="Password"  [(ngModel)]="rd.password"
+                    formControlName="pass">
+                </div>
+
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.pass">
+                      <div class="error-message"
+                        *ngIf="regForm.get('pass').hasError(error.type) && (regForm.get('pass').dirty || regForm.get('pass').touched)">
+                        {{ error.message }}
+                      </div>
+                    </ng-container>
+                  </div>
+                <div class="form-group">
+                    <label for="ConfirmPassword">ConfirmPassword</label>
+                    <input type="password" class="form-control" id="ConfirmPassword" placeholder="Confirm Password">
+                </div>
+                <div class="form-group">
+                    <label for="MobileNumber">Mobile Number</label>
+                    <input type="text" class="form-control" id="MobileNumber" placeholder="MobileNumber" [(ngModel)]="rd.mobileNumber" formControlName="mo">
+                </div>
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.mo">
+                      <div class="error-message"
+                        *ngIf="regForm.get('mo').hasError(error.type) && (regForm.get('mo').dirty || regForm.get('mo').touched)">
+                        {{ error.message }}
+                      </div>
+                    </ng-container>
+                  </div>
+                <div class="form-group">
+                    <label for="PinCode">PinCode</label>
+                    <input type="text" class="form-control" id="PinCode" placeholder="PinCode"  [(ngModel)]="rd.pinCode"
+                    formControlName="pincode">
+                </div>
+                <div class="error-messages">
+                    <ng-container *ngFor="let error of error_messages.pincode">
+                      <div class="error-message"
+                        *ngIf="regForm.get('pincode').hasError(error.type) && (regForm.get('pincode').dirty || regForm.get('pincode').touched)">
+                        {{ error.message }}
+                      </div>
+                    </ng-container>
+                  </div>
+                <div class="form-group">
+                    <label for="TypeOfEmployement">Type of Employement</label>
+                    <input type="text" class="form-control" id="TypeOfEmployement" placeholder="Type">
+                </div>
+                <button class="btn btn-success btn-block" routerLink="/login" [disabled]="!regForm.valid">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

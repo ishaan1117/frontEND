@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <title>Loan details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Basic Progress Bar</h2>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width:40%">40%
+            </div>
+        </div>
+    </div>
+
+    <p>Loan Details</p>
+    <form name="loan-details" *ngIf="check" class="form-container" [formGroup]="loanForm">
+        <table class="center">
+            
+            <tr>
+                <td>Max Loan Amount Grantable:</td>
+                <td><input type="text" class="noborder" name="loan" formControlName="email" [(ngModel)]="ld.email"></td>
+            </tr>
+       
+          
+            <tr>
+                <td>Interest Rate:</td>
+                <td><input type="text" class="noborder" name="interest"></td>
+            </tr>
+            <tr>
+                <td>Tenure:</td>
+                <td><input type="number" class="noborder" name="tenure"></td>
+            </tr>
+            <tr>
+                <td>Loan Amount:</td>
+                <td><input type="number" class="noborder" name="lamount"></td>
+            </tr>
+            <tr>
+                <td class="noborder" colspan="2">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button name="lsubmit" class="btn btn-primary btn-lg" routerLink="/personaldetails"
+                            (click)="onClick()">Submit</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <router-outlet></router-outlet>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!-- <div class="container">
+    <div class="row">
+    <div class="col-sm-5">
+        <a routerLink="/IncomeDetails">Apply for a Home Loan</a>
+    </div>
+    <div class="col-sm-2">
+
+    </div>
+    <div class="col-sm-5">
+        <a routerLink="/loantracker">LoanTracker</a>
+    </div>
+</div>
+</div> -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2 collapse show d-md-flex bg-dark pt-2 pl-0 min-vh-70" id="sidebar">
+            <ul class="nav flex-column flex-nowrap overflow-hidden">
+                <li class="nav-item">
+                    <a class="nav-link text-truncate" routerLink="/IncomeDetails"><i class="fa fa-home"></i> <span
+                            class="d-none d-sm-inline" style="color: white;">Apply for a home loan</span></a>
+                </li>
+                <li class="nav-item"><a class="nav-link text-truncate" routerLink="/loantracker"><i class="bi bi-bar-chart-steps"></i>
+                            <span class="d-none d-sm-inline " style="color: white;">Loan
+                            tracker</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>

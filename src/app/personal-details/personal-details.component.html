@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <title>Personal details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Basic Progress Bar</h2>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width:60%">60%
+            </div>
+        </div>
+    </div>
+
+    <p>personal details</p>
+    <form name="personal-details" *ngIf="check">
+        <table class="center">
+            <tr>
+                <td>First name:</td>
+                <td><input type="text" class="noborder" name="fname" id="Fname"></td>
+            </tr>
+            <tr>
+                <td>Middle name:</td>
+                <td><input type="text" class="noborder" name="mname" id="Mname"></td>
+            </tr>
+            <tr>
+                <td>Last name:</td>
+                <td><input type="text" class="noborder" name="lname" id="Lname"></td>
+            </tr>
+            <tr>
+                <td>Email ID:</td>
+                <td><input type="email" class="noborder" name="email" id="Email"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" class="noborder" name="pwd" id="Pwd"></td>
+            </tr>
+            <tr>
+                <td>Confirm Password:</td>
+                <td><input type="password" class="noborder" name="cpwd" id="Cpwd"></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="number" class="noborder" name="pno" id="Num"></td>
+            </tr>
+            <tr>
+                <td>Dob:</td>
+                <td><input type="date" class="noborder" name="dob" id="Dob"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender" value="male"> Male<br>
+                    <input type="radio" name="gender" value="female"> Female<br>
+                </td>
+            </tr>
+            <tr>
+                <td>Nationality:</td>
+                <td><input type="text" class="noborder" name="nationality" id="nationality"></td>
+            </tr>
+            <tr>
+                <td>Aadhar no:</td>
+                <td><input type="text" class="noborder" name="aadhar" id=Ano></td>
+            </tr>
+            <tr>
+                <td>Pan no:</td>
+                <td><input type="text" class="noborder" name="pan" id="Pno"></td>
+            </tr>
+            <tr>
+                <td class="noborder" colspan="2">
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button name="lsubmit" class="btn btn-primary btn-lg" routerLink="/documentsupload"
+                            (click)="onClick()">Submit</button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <router-outlet></router-outlet>
+</body>

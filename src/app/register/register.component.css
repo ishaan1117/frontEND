@@ -1,0 +1,27 @@
+.bg-img {
+  background-image: url("src/assets/images/RegisterPageBackground.jpg");
+  background-size: cover;
+}
+p {
+  margin-top: 250px;
+  color: white;
+}
+input {
+  background: transparent;
+  border: 0px;
+  border-radius: 0px;
+  border-bottom: 1px solid white;
+}
+.mandy {
+  margin: 20px;
+  border: 1px solid white;
+  box-shadow: -1px 1px 60px 10px black;
+  background: rgba(0, 0, 0, 0.4);
+}
+.error-message {
+  color: red;
+}
+
+input.ng-touched.ng-invalid {
+  border: 1px solid red;
+}

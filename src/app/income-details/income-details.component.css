@@ -1,0 +1,32 @@
+/* table,
+td,
+th {
+  border: 1px solid black;
+} */
+
+table {
+  border-collapse: collapse;
+}
+td {
+  border-right: blue;
+  vertical-align: center;
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+}
+
+.noborder {
+  border: none !important;
+}
+p {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 300%;
+}
+.center {
+  margin-top: 15%;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
